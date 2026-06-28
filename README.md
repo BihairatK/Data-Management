@@ -125,7 +125,7 @@ Le projet produit notamment les indicateurs suivants :
 - Risk Score.
 
 
-# 8 - Machine Learning
+## 8 - Machine Learning
 
 Deux approches sont développées.
 
@@ -165,7 +165,7 @@ Les modèles sont expliqués grâce à :
 - SHAP Values
 - Partial Dependence Plot
 
-# 10 - Risk Score
+## 10 - Risk Score
 
 Un score de risque territorial est construit en combinant :
 
