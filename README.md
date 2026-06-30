@@ -36,6 +36,47 @@ Les compagnies d'assurance doivent évaluer le niveau d'exposition des territoir
 
 ## 2 - Architecture du projet
 
+catnat_project/
+│
+├── data/
+│   ├── raw/
+│   ├── bronze/
+│   ├── silver/
+│   └── gold/
+│
+├── models/
+│   ├── __init__.py
+│   └── schemas.py
+│
+├── pipelines/
+    _init_.py
+    bronze_pipeline.py
+    silver_pipeline.py
+    gold_pipeline.py
+    
+├── ml/
+│   ├── dataset.py
+│   ├── preprocessing.py
+│   ├── train.py
+│   ├── evaluate.py
+│   ├── explain.py
+│   └── predict.py
+│
+├── analysis/
+│   ├── eda.py
+│   └── visualization.py
+    
+├── utils/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── io.py
+│   ├── logger.py
+│   └── validation.py
+│
+├── notebooks/
+├── reports/
+├── main.py
+└── requirements.txt
 <img width="405" height="505" alt="image" src="https://github.com/user-attachments/assets/c614ac4e-3e03-46f1-9bb1-7f59e9d0e584" />
 
                 
@@ -48,9 +89,9 @@ Les compagnies d'assurance doivent évaluer le niveau d'exposition des territoir
 
 Le projet exploite plusieurs jeux de données Open Data :
 
-- Informations sur les communes françaises (Population, Altitude, Superficie, Densité) : 
-- Événements CatNat (GASPAR) : 
-- Nombre d'arrêtés de catastrophe naturelle : 
+- Informations sur les communes françaises (Population, Altitude, Superficie, Densité) : https://www.data.gouv.fr/datasets/communes-et-villes-de-france-en-csv-excel-json-parquet-et-feather (base de 2025)
+- Événements CatNat (GASPAR) : https://www.georisques.gouv.fr/donnees/bases-de-donnees/procedures-administratives-relatives-aux-risques (file : catnat_gaspar_2026-06-29)
+- Nombre d'arrêtés de catastrophe naturelle : https://www.data.gouv.fr/datasets/nombre-darretes-de-catastrophes-naturelles-pour-visulisation?utm_source=chatgpt.com 
 
 
 ## 5 - Technologies utilisées
@@ -204,10 +245,10 @@ python train.py
 
 
 ## 13 - Perspectives d'amélioration
-Automatisation avec Airflow ;
-Transformation avec dbt ;
-Conteneurisation Docker ;
-Suivi des expérimentations avec MLflow ;
-Déploiement d'une API avec FastAPI ;
-Hébergement sur Azure ou AWS.
+* Automatisation avec Airflow ;
+* Transformation avec dbt ;
+* Conteneurisation Docker ;
+* Suivi des expérimentations avec MLflow ;
+* Déploiement d'une API avec FastAPI ;
+* Hébergement sur Azure ou AWS.
 
